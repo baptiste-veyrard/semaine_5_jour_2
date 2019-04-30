@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>TheGossipProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #303030 !important">
+    <a class="navbar-brand font_white" href="#">The Gossip Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link font_white" href="<%=root_path%>">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font_white" href="<%=static_pages_contact_path%>">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font_white" href="<%=static_pages_team_path %>">Team</a>
+        </li>
+      </ul>
+      <span class="navbar-text font_white">
+        Welcome to The Gossip Project
+      </span>
+    </div>
+  </nav>
+  <!-- FIN NAV BAR -->
+    <%= yield %>
+  </body>
+</html>
+
+<style>
+.font_white{
+  color: white !important;
+}
+</style>
