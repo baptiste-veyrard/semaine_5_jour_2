@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def home_page
+  def index
   	@gossip = Gossip.all
   end
 end

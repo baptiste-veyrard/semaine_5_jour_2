@@ -9,12 +9,10 @@ class Gossip < ApplicationRecord
   	#VALIDATION PART
   validates :title,
   	presence: true,
-  	length: {minimum: 3, maximum: 14}
+  	length: {in: 3..14}
 
   validates :content,
   	presence: true
-
-
 
 
 end

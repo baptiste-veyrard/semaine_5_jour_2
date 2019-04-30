@@ -8,6 +8,8 @@
 <div class="container text-center" style="margin-top: 30px;">
 	<h1>Welcome to The Gossip Project</h1>
 	<br/>
+	<h2><a href="../gossips/new">Click here to create a new gossip</a></h2>
+	<br/>
 	<h2>Here is the list of all Gossips:</h2>
 	<br/>
 </div>
@@ -27,7 +29,7 @@
 					<h5 class="card-title"><span style="color: red">Gossip n°<%= gossip.id%></span> : <%=gossip.title%></h5>
 					<p class="card-text">Author : <%=gossip.user.first_name%><br/>
 						Description : <%=gossip.content%></p>
-						<a href="gossip/<%= gossip.id%>" class="btn btn-primary">Know more</a>
+						<a href="gossips/<%= gossip.id%>" class="btn btn-primary">Know more</a>
 					</div>
 				</div>
 			</div>

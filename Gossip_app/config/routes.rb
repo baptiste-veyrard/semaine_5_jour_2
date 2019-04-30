@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+	resources :gossips
+	resources :home
   get 'user/:id_user', to: 'user#show'
-  get 'gossip/:id_gossip', to: 'gossip#show'
-  root 'home#home_page'
+  root 'home#index'
   get 'welcome/:id', to:'welcome#welcome_page'
   get 'static_pages/contact', to: 'static_pages#contact'
 
